@@ -1,27 +1,23 @@
-var myMap = L.map('mapID').setView([50.18, 10.14], 6);
+var myMap = L.map('mapID').setView([41.8, -93.8], 6);
 
-L.tileLayer('https://dev.{s}.tile.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', {
-	maxZoom: 20,
-    attribution: '<a href="https://github.com/cyclosm/cyclosm-cartocss-style/releases" title="CyclOSM - Open Bicycle render">CyclOSM</a> | Map data: &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    
+var Esri_NatGeoWorldMap = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/NatGeo_World_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; National Geographic, Esri, DeLorme, NAVTEQ, UNEP-WCMC, USGS, NASA, ESA, METI, NRCAN, GEBCO, NOAA, iPC',
+	maxZoom: 16,
     id: 'mapbox/streets-v11',
     tileSize: 512,
     zoomOffset: -1
 }).addTo(myMap);
 
-var myMarker = L.marker([50.18, 10.14]).addTo(myMap)
+L.tileLayer.wms('http://mesonet.agron.iastate.edu/cgi-bin/wms/nexrad/n0r.cgi', {
+  layers: 'nexrad-n0r-900913',
+  format: 'image/png',
+  transparent: true,
+  attribution: 'NOAA, Iowa State University'
+}).addTo(myMap)
 
-var myPoly = L.polygon([
-    [52.18, 12.0],
-    [50.18, 10.14],
-    [51, 13.7]
-  ]).addTo(myMap)
-
-  var myLine = L.polygon([
-    [52.18, 13.0],
-    [52.18, 11.14],
-  ]).addTo(myMap)
-
-myPoly.bindPopup('this is a nice triangle')
-myMarker.bindPopup('This is a marker on my map')
-myLine.bindPopup('This is a line on a map that I made')
+L.tileLayer.wms('https://mesonet.agron.iastate.edu/cgi-bin/wms/us/wwa.cgi', {
+  layers: 'warnings_c',
+  format: 'image/png',
+  transparent: true,
+  attribution: 'NOAA, Iowa State University'
+}).addTo(myMap)
