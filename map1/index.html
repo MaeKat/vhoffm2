@@ -1,44 +1,59 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	
+
 	<title>Random European Triangle</title>
 
 	<meta charset="utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+		integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+		crossorigin="" />
 	<link rel="stylesheet" href="map1_style.css">
 	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="../general_styles.css">
-	
-	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
-	
+
+	<script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+		integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+		crossorigin=""></script>
+
 </head>
 <div class="w3-top">
-		<div class="w3-bar w3-red w3-card w3-left-align w3-large">
-		  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-		  <a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
-		  <a href="./map1/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 7</a>
-		  <a href="../map2/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 8</a>	
-		  <a href="../map3/index.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 9</a>	
+	<div class="w3-bar w3-red w3-card w3-left-align w3-large">
+		<a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red"
+			href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i
+				class="fa fa-bars"></i></a>
+		<a href="../index.html" class="w3-bar-item w3-button w3-padding-large w3-white">Home</a>
+		<a href="../map1/index.html"
+			class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 7</a>
+		<a href="../map2/index.html"
+			class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 8</a>
+		<a href="../map3/index.html"
+			class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 9</a>
+		<a href="../bootstrap-map/index.html"
+			class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Assignment 10a</a>			
 
 
+	</div>
+
+	<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
+		<div class="w3-content">
+			<div class="w3-third w3-center">
+				<div id="mapID"></div>
+
+			</div>
 		</div>
-
-		<div class="w3-row-padding w3-light-grey w3-padding-64 w3-container">
-				<div class="w3-content">
-				  <div class="w3-third w3-center">
-<div id="mapID"></div>
-
-</div></div></div>
-<script src="map1_scripts.js"></script>
+	</div>
+	<script src="map1_scripts.js"></script>
 
 
 
-</body>
+	</body>
+
 </html>
