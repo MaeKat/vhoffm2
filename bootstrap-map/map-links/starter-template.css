@@ -1,0 +1,13 @@
+#map1, #map2 {
+  height: 400px;
+}
+body {
+  padding-top: 3.5rem;
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+h3 {
+  font-size: 1.25rem;
+}
